@@ -22,7 +22,7 @@ def file_name(path):
                 F.append(os.path.join(path, t))  # 将所有的文件名添加到L列表中
     return F
 
-
+# 处理owl文件
 def owlParse(owlFile):
     g = Graph()
 
@@ -32,4 +32,5 @@ def owlParse(owlFile):
         print("hEntity:", sharp(s), "relation:", sharp(p), "tEntity:", sharp(o))
 
 
-owlParse("C:\\Users\\Jacky\\Desktop\\02RDF文件\\1.owl")
+for file in file_name("C:\\Users\\Jacky\\Desktop\\02RDF文件"):
+    owlParse(file)
